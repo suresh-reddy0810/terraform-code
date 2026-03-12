@@ -5,7 +5,7 @@ pool:
   vmImage: ubuntu-latest
  
 variables:
-  serviceConnection: 'terraform-azure-connection'
+  serviceConnection: 'terraform_service_connection'
   workingDirectory: 'environments/prod'
  
 steps:
@@ -40,4 +40,5 @@ steps:
     provider: azurerm
     command: apply
     workingDirectory: $(workingDirectory)
+
     environmentServiceNameAzureRM: $(serviceConnection)
