@@ -21,9 +21,9 @@ steps:
     command: init
     workingDirectory: $(workingDirectory)
     backendServiceArm: $(serviceConnection)
-    backendAzureRmResourceGroupName: rg-terraform-state
-    backendAzureRmStorageAccountName: statefilebackupaccounts
-    backendAzureRmContainerName: tfstate
+    backendAzureRmResourceGroupName: suresh1-rg
+    backendAzureRmStorageAccountName: statefilestorearea
+    backendAzureRmContainerName: statefile-cont
     backendAzureRmKey: prod.tfstate
  
 - task: TerraformTaskV4@4
@@ -42,3 +42,4 @@ steps:
     workingDirectory: $(workingDirectory)
 
     environmentServiceNameAzureRM: $(serviceConnection)
+
